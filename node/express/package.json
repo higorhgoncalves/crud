@@ -19,6 +19,8 @@
   },
   "_moduleAliases": {
     "@": ".",
+    "@controllers": "./controllers",
+    "@models": "./models",
     "@routes": "./routes",
     "@views": "./views"
   }
