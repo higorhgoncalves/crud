@@ -40,18 +40,23 @@ const AlunoController = {
         const { nome } = req.body;
 
         AlunoModel.create({ nome }, (err) => {
-            return res.status(500).send(err.message);
+            if (err) {
+                return res.status(500).send(err.message);
+            }
+            console.log(`Aluno criado com o ID: ${this.lastID}`);
+            res.redirect('/alunos')
         });
-        res.redirect('/alunos')
     },
 
     excluirAluno: (req, res) => {
         const { id } = req.params;
-        
+
         AlunoModel.delete(id, (err) => {
             if (err) {
                 return res.status(500).send(err.message);
             }
+            console.log(`Aluno com ID ${id} excluído.`);
+            res.redirect('/alunos')
         });
     }
 };

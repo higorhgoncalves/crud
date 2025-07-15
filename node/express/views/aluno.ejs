@@ -22,14 +22,14 @@
                             <button type="submit" class="btn btn-primary">Salvar</button>
                         </div>
                     </form>
-                    <form action="/alunos/<%= aluno.id %>?_method=DELETE" method="POST">
+                    <form class="d-flex justify-content-between" action="/alunos/<%= aluno.id %>?_method=DELETE" method="POST">
+                        <a href="/alunos" class="btn btn-primary">Voltar para a Lista</a>
                         <button type="submit" class="btn btn-danger" 
                             onclick="return confirm('Tem certeza que deseja excluir esse aluno?')">
                             Excluir
                         </button>
                     </form>
                         
-                    <a href="/alunos" class="btn btn-primary">Voltar para a Lista</a>
                 </div>
             </div>
         </div>

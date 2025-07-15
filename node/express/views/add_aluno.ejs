@@ -13,9 +13,12 @@
                     <h1>Adicionar Aluno</h1>
                 </div>
                 <div class="card-body">
-                    <form class="mb-3" action="/add_aluno" method="POST">
+                    <form class="mb-3" action="/alunos/add" method="POST">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="nome" value="" class="form-control mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="nome" value="" class="form-control mb-3" placeholder="">
+                                <label for="nome" class="form-label">Nome do Aluno</label>
+                            </div>
                             <button type="submit" class="btn btn-primary">Salvar</button>
                         </div>
                     </form>
